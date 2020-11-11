@@ -37,8 +37,14 @@ export default class PersonalInfo extends Component {
      
     };
 	
-	
-console.log('Com- Line 41 v1 peinfo')
+	let token='eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMzhjMDczYWYyNmVhMjhjOTNhMzk2MWYwMTI0Y2VjYjJhYmNlMDdlZGVjZDM0MjU1YmJmOGZkMGE1NWM3MWM1M2MzZmNhOTk1OTMyNGJmNjIiLCJpYXQiOjE1OTczMDk5MzMsIm5iZiI6MTU5NzMwOTkzMywiZXhwIjoxNjI4ODQ1OTMzLCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.PRMvUXUPWS4ETcDJO4RBC43Ssu8lP7TMe8G7lS_yy3HHJ7sNI9sa3gWzfA80zGzZ6cMnIHbDglWwkDnRTxTN2cMcEjfoO0QMRJXXU25PxttM6cDZb6s5rtaqBr6U2LAIlaLD8ivA4gvRRkQimjR4OOiPvGipBE0B78wv-ZF8IQSUzEvEGaZg4sF1CrOehYCjrXzU8CDgmRnScKEn316wQfcujT2Ihok9yncPX2Yo5dNmFVid4AMdUcCcJ7tp6mPmXYSi1EMYpRJIk_A_oTJ1WBdfk9zpyaA_RmDrFvzsJV1PVGoOe_ZQsj4ir6LzC0fxn6YJxfWp8BL1EsU5mMECjFPF5h_Jc_87UspSd5hAxcny1gj_ofJ1VlFKPZ5HvXxyxAkf9orqd79FGgWRzINLr6uXLHRpDP7DJp-okpHn8cPOk0yyxEiosNiSKDLv4XN7h0VrXk20_DCXG4co2Dyg2BSyLRUUzB-x7cN3GUNBsNeruO__FjimkYTHRobDVOq4p3ePm0Bws1P2ihRo0CTIjGWrqpQd-gIuahSQ3cQSLBBpw6dhMIIlyQiK1CNIE3yoNwduWt6rglTN5h7wc7GrbTzHFn73vfM1zHm_zz813b8DoZyuje_F03G_lK5abF7hY51tnTFbdOa7CRqTrm_OYHqtu-GUeLu1cQLBp7gFBws';
+
+		 const config4 = {
+   headers: { 'Access-Control-Allow-Origin' : '*', Authorization: `Bearer ${token}` }
+  }
+		 
+		 
+console.log('Com- Line 41 v1 peinfo',config4 )
 		
  Axios.post("https://mfprodigy.ga/api/persional_details/user_details", {
       dob: '1995-03-03',
@@ -51,7 +57,7 @@ console.log('Com- Line 41 v1 peinfo')
 	  father_name:'ankesh',
 	  mother_name:'anjali'
      
-    }).then(() => {
+    }, config4 ).then(() => {
       
         console.log(' line 55 com-success data inserted')
    
