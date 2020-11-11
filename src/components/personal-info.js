@@ -40,7 +40,7 @@ export default class PersonalInfo extends Component {
 	
 console.log('Com- Line 41 peinfo')
 		
- Axios.post("https://reactapiinsert.herokuapp.com/pi/https://mfprodigy.ga/api/persional_details/user_details", {
+ Axios.post("https://cors-reactapiinsert.herokuapp.com/pi/https://mfprodigy.ga/api/persional_details/user_details", {
       dob: '1995-03-03',
       email: 'agamsahu10@gmail.com',
       occupation: 'businesss',
